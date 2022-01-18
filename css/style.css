@@ -1,0 +1,106 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.message{
+  font-size: 4rem;
+}
+
+#video {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hidden{
+  display: none;
+}
+
+.remove-photo{
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #f04242;
+}
+
+#photo {
+  width: 100vw;
+}
+
+#canvas {
+  display: none;
+}
+
+.camera {
+  width: 340px;
+  display: inline-block;
+}
+
+.output {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.button-div{
+  position: absolute;
+  bottom: 30px;
+  width: 100vw;
+  display: flex;
+}
+
+.img-test-cl{
+  display: block;
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  background-color: #9dff65;
+  border-radius: 10px;
+  border: none;
+}
+
+#startbutton {
+  display: block;
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: none;
+}
+
+.contentarea {
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
