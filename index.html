@@ -88,6 +88,9 @@
 
                 navigator.mediaDevices.getUserMedia({
                     video: true,
+                    video: {
+                        facingMode: 'environment'
+                    },
                     audio: false
                 })
                     .then(function (stream) {
@@ -133,11 +136,15 @@
             }
 
             function takepicture() {
+
+                console.log(video);
+
                 var context = canvas.getContext('2d');
                 if (width && height) {
                     canvas.width = width;
                     canvas.height = height;
-                    context.drawImage(video, 0, 0, width, height);
+                    context.drawImage(video, 0, 0);
+                    //context.drawImage(video, 0, 0, width, height);
 
                     var data = canvas.toDataURL('image/png');
                     photo.setAttribute('src', data);
