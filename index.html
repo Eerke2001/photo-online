@@ -89,7 +89,10 @@
                 navigator.mediaDevices.getUserMedia({
                     video: true,
                     video: {
-                        facingMode: 'environment'
+                        facingMode: 'environment',
+                        // width: { min: 640, ideal: 1920 },
+                        // height: { min: 400, ideal: 1080 },
+                        // aspectRatio: { ideal: 1.7777777778 }
                     },
                     audio: false
                 })
@@ -143,8 +146,8 @@
                 if (width && height) {
                     canvas.width = width;
                     canvas.height = height;
-                    context.drawImage(video, 0, 0);
-                    //context.drawImage(video, 0, 0, width, height);
+                    //context.drawImage(video, 0, 0);
+                    context.drawImage(video, 0, 0, width, height);
 
                     var data = canvas.toDataURL('image/png');
                     photo.setAttribute('src', data);
